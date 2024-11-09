@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     if (note) {
-      fetch(`/docs/${note}.md`)
+      fetch(`docs/${note}.md`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Failed to fetch markdown');
