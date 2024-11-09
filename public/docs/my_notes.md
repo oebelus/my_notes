@@ -18,7 +18,7 @@ This site is designed to feel like an Obsidian vault. It's still under developme
 
 #### Connect with me
 
-Feel free to reach out or follow me on these platforms:
+Feel free to reach out :3
 
 - [LinkedIn](https://www.linkedin.com/in/imane-el-fadil-el-idrissi-b528b31a6/)
 - [X](https://x.com/oebelus)
