@@ -12,36 +12,35 @@ Let's take Ethereum as an example. It has four important perks:
 
 The architecture of a Decentralized Application (DApp) like Ethereum consists of multiple components that work together to provide a decentralized solution.
 
-1- User 2. Web Browser
+1- User 
+
+2. Web Browser
 
 - A signer, and it's generally a browser extension, like MetaMask.
 
-3. Frontend: it interacts with the Ethereum blockchain through a provider.
-   - In most cases, we don't want to put the assets on the blockchain since it might be too costy, we can handle it through a decentralized structure like IPFS that will use the Provider and connect it to the frontend.
-4. Provider: Since a DApp's frontend cannot directly connect to the blockchain, it relies on a provider (MetaMask, Infura, Alchemy...) that acts as a bridge between the frontend and the Ethereum blockchain. It allows the frontend to send transactions, sign requests, and query blockchain data.
-5. Ethereum Blockchain: it provides the security and immutability for all records. The Ethereum blockchain contains multiple critical components:
-   - **Blocks**: Grouped sets of transactions that are linked together in a chain.
-   - **Nodes**: Decentralized machines that validate and propagate transactions and smart contracts.
-   - **Consensus Mechanism (Proof of Stake)**: Ensures that transactions are legitimate and that all nodes have a consistent view of the blockchain state.
-6. [[Smart Contracts]]
-7. [[EVM]], it handles:
-   - Executing the code for smart contracts
-   - Determining the new state of the blockchain after contract execution
-   - Processing gas (transaction fees)
-8. Layer 2 solutions for scalability (Polygon, ZK rollups), built on top of the Ethereum blockchain to enhance scalability. They connect to both the Ethereum blockchain and the frontend, reducing congestion and transaction costs.
+3- Frontend: it interacts with the Ethereum blockchain through a provider.
+
+- In most cases, we don't want to put the assets on the blockchain since it might be too costy, we can handle it through a decentralized structure like IPFS that will use the Provider and connect it to the frontend.
+
+4- Provider: Since a DApp's frontend cannot directly connect to the blockchain, it relies on a provider (MetaMask, Infura, Alchemy...) that acts as a bridge between the frontend and the Ethereum blockchain. It allows the frontend to send transactions, sign requests, and query blockchain data.
+
+5- Ethereum Blockchain: it provides the security and immutability for all records. The Ethereum blockchain contains multiple critical components:
+
+- **Blocks**: Grouped sets of transactions that are linked together in a chain.
+- **Nodes**: Decentralized machines that validate and propagate transactions and smart contracts.
+- **Consensus Mechanism (Proof of Stake)**: Ensures that transactions are legitimate and that all nodes have a consistent view of the blockchain state.
+
+6- Smart Contracts
+
+7- EVM, it handles:
+
+- Executing the code for smart contracts
+- Determining the new state of the blockchain after contract execution
+- Processing gas (transaction fees)
+
+8- Layer 2 solutions for scalability (Polygon, ZK rollups), built on top of the Ethereum blockchain to enhance scalability. They connect to both the Ethereum blockchain and the frontend, reducing congestion and transaction costs.
 
 ##### Overview
-
-```
-User -> Web Browser -> Frontend -> Provider (MetaMask/Infura/Alchemy) -> Ethereum Blockchain        |
-							--------------
-		---------------------             |
-		|   Smart Contracts  |            |
-		|   Ethereum Virtual |<------ Layer 2
-		|      Machine (EVM) |
-		---------------------
-
-```
 
 - **User** interacts with the DApp through their web browser.
 - **Frontend** displays the user interface and handles user input.
@@ -52,7 +51,7 @@ User -> Web Browser -> Frontend -> Provider (MetaMask/Infura/Alchemy) -> Ethereu
 
 All in all:
 
-```
+```md
 Frontend <--> Blockchain
 ```
 

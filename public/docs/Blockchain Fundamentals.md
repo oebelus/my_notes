@@ -170,24 +170,41 @@ class Block {
 ### 6. Use cases
 
 1- Challenges
+
 _Example_ - a streaming platform like YouTube or Twitch:
 
 - Storage: we'll need a huge amount of storage.
 - Streaming: the latency between transactions and while doing a transaction.
 - Content moderation: content quality and decentralization, since it would be harder to manage content without a central entity.
 
-2. Use Cases
-   _Example_ - A decentralized supply chain management for organic food products:
-   \> Benefits;
+2- Use Cases
+
+  _Example_ - A decentralized supply chain management for organic food products:
+
+\> Benefits;
 
 - Transparency in Sourcing
 - Realtime Tracking
 - Quality Insurance
 - Fraud Prevention
 - Streamlined Payment
-  \> The Process - We can't alter it
 
-1- Form registration: product, how it is grown, origin... 2. Planting and growing 3. Harvesting: date, amount... 4. Processing and packaging 5. Transportation 6. Retail sale 7. Consumer interaction
+\> The Process - We can't alter it
+
+1- Form registration: product, how it is grown, origin...
+
+2- Planting and growing
+
+3- Harvesting: date, amount...
+
+4- Processing and packaging
+
+5- Transportation
+
+6- Retail sale
+
+7- Consumer interaction
+
 \> The Challenges of this system:
 
 - Data Integrity: we need to be sure that the process is correct
@@ -212,7 +229,7 @@ _Example_ - a streaming platform like YouTube or Twitch:
     - Stores the entire blockchain ledger containing all transaction history since inception.
     - Require a large amount of memory.
   - _Pruned full nodes_
-    - Download and verify the full blockchain but delete older blocks once they reach a memory limit -> ~={cyan}Pruning=~.
+    - Download and verify the full blockchain but delete older blocks once they reach a memory limit -> Pruning.
     - Retain only the most recent transactions and essential data to reduce storage needs.
       - If the size limit is 1 GB, it will hold the most recent gigabyte of transactions.
     - Blocks aren't fully deleted since their metadata and sequence remain.
@@ -258,7 +275,7 @@ While inspecting an Ethereum transaction, two terms invariably catch the glance:
 - _Max priority fee:_ The maximum `tip` we're willing to give miners, configurable prior to sending a transaction.
 - _Block confirmations:_ The number of blocks which have been mined or validated which have been confirmed to contain your transaction.
 
-```
+```md
 Wei:  1,000,000,000 Wei  = 1 Gwei (Gigawei)
 Gwei: 1,000,000,000 Gwei = 1 Eth
 ```
@@ -274,7 +291,7 @@ When we send a transaction to the blockchain, we're passing a private key. This 
 
 When we sign a transaction on the blockchain, we're digitally signing some data with our private key. - The hashing algorithm used makes it impossible for something to derive your private key from a message signature.
 
-![](https://updraft.cyfrin.io/blockchain-basics/08-signing-transactions/signing-transactions3.png)
+![Signing transactions](https://updraft.cyfrin.io/blockchain-basics/08-signing-transactions/signing-transactions3.png)
 
 This signing method allows anyone to verify the validity of a transaction by comparing the message signature to a user's public key!
 
@@ -282,13 +299,14 @@ This signing method allows anyone to verify the validity of a transaction by com
 
 ### 9. Layer 1 and Layer 2
 
-1- `Layer 1` solutions: This refers to base layer blockchain implementations like Bitcoin or Ethereum.
+1- Layer 1 solutions: This refers to base layer blockchain implementations like Bitcoin or Ethereum.
 
 - Applications directly deployed on Ethereum, like Uniswap, are not considered L2s but rather dApps on L1.
 
-2. `Layer 2` solutions: These are applications added on top of a layer one, like [Chainlink](https://chain.link/), [Arbitrum](https://arbitrum.io/) or Optimism, they're trying to solve the problem of scalability. These protocols leverage something called `rollups`.
-   - A **Layer 2** is any application built on outside an L1 blockchain that _hooks back into it_.
-   - There are different types of Layer 2:
-     - **Chainlink**: a decentralized Oracle networks.
-     - **The Graph**: event indexing networks.
-   - But the most popular type of L2 is the **rollup**, or **L2 chain**.
+2- Layer 2 solutions: These are applications added on top of a layer one, like [Chainlink](https://chain.link/), [Arbitrum](https://arbitrum.io/) or Optimism, they're trying to solve the problem of scalability. These protocols leverage something called `rollups`.
+
+- A **Layer 2** is any application built on outside an L1 blockchain that _hooks back into it_.
+- There are different types of Layer 2:
+- **Chainlink**: a decentralized Oracle networks.
+- **The Graph**: event indexing networks.
+- But the most popular type of L2 is the **rollup**, or **L2 chain**.

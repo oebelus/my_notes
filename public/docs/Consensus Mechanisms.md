@@ -10,7 +10,7 @@ A consensus mechanism enables blockchain networks to reach a collective agreemen
 
 **_Examples:_** - Litecoin, and Bitcoin.   - Ethereum was using PoW mechanism, but now shifted to Proof of Stake(PoS).
 
-**_Core Principle:_** - The PoW process relies on finding a computational solution that is ~={magenta}challenging to generate=~ but ~={magenta}simple to verify=~, ensuring security while preventing tampering. - The 'block', 'nonce', and 'data' are un through the hash algorithm, producing the hash for that block. - As a result, even a minor change in the data leads to an entirely different hash, hence, invalidating the block.
+**_Core Principle:_** - The PoW process relies on finding a computational solution that is challenging to generate but simple to verify, ensuring security while preventing tampering. - The 'block', 'nonce', and 'data' are un through the hash algorithm, producing the hash for that block. - As a result, even a minor change in the data leads to an entirely different hash, hence, invalidating the block.
 
 **_Mining Process:_**
 
@@ -46,7 +46,7 @@ A consensus mechanism enables blockchain networks to reach a collective agreemen
     - The network grants a **mining reward** to the first miner who successfully solves the puzzle and adds a new block.
       - Often consists of newly minted cryptocurrency and transaction fees from the included transactions.
   - _Reward reduction:_
-    - Many PoW blockchains, like Bitcoin, periodically reduce the reward over time (known as "~={yellow}halving=~") to control inflation and increase scarcity, potentially boosting the cryptocurrency’s value.
+    - Many PoW blockchains, like Bitcoin, periodically reduce the reward over time (known as "halving") to control inflation and increase scarcity, potentially boosting the cryptocurrency’s value.
 
 ```javascript
 class Block {
@@ -98,7 +98,7 @@ const prefix = 4;
 const minedBlock = mineBlock(blockData, prefix);
 ```
 
-2. _Litecoin (Scrypt)_
+2- _Litecoin (Scrypt)_
    > **Mathematical Problem**: Similar to Bitcoin, but uses the Scrypt algorithm, which is designed to be more memory-intensive to prevent ASIC mining.
 
 ```js
@@ -132,7 +132,7 @@ const minedBlock = mineBlock(blockData, prefix);
 
 Dogecoin uses the same Scrypt algorithm with a focus on faster processing times.
 
-3. _Zcash (Equihash)_
+3- _Zcash (Equihash)_
    > **Mathematical Problem**: Zcash uses the Equihash algorithm, which is based on the Generalized Birthday Problem, requiring miners to find a solution that satisfies certain properties.
 
 Equihash is significantly more complex to implement than SHA-256 or Scrypt. The specifics would typically be handled in existing mining software, like zcashd.
@@ -144,7 +144,15 @@ A miner adds their own public key and as a result receives the reward coins.
 
 ###### RECAP
 
-1- The sender sends the transaction. 2. Verification of the transaction: We have to make sure that the sender of the transaction really authorized it. 3. The blockchain asks each transaction to include a unique **signature** that only the sender can produce with the sender's own private key. 4. Others in the network can verify that a signature is valid for a transaction by only using the sender's public key. 5. When the transaction is validated, it is added to a block.
+1- The sender sends the transaction.
+
+2- Verification of the transaction: We have to make sure that the sender of the transaction really authorized it.
+
+3- The blockchain asks each transaction to include a unique **signature** that only the sender can produce with the sender's own private key.
+
+4- Others in the network can verify that a signature is valid for a transaction by only using the sender's public key.
+
+5- When the transaction is validated, it is added to a block.
 
 > Such a system ensures a reliable financial transaction ecosystem, which can support its own digital currency. - Bitcoin is the digital currency for Satoshi's blockchain system.
 

@@ -1,6 +1,6 @@
 They are L2 scaling solutions that enable to increase the number of transactions on Ethereum by bundling multiple transactions into one, reducing gas costs.
 
-![](https://updraft.cyfrin.io/blockchain-basics/15-l1s-l2s-and-rollups/tx-bundle.png)
+![Rollups](https://updraft.cyfrin.io/blockchain-basics/15-l1s-l2s-and-rollups/tx-bundle.png)
 
 Rollups help solve the blockchain trilemma, which states that a blockchain can only achieve two out of three properties:
 
@@ -13,7 +13,7 @@ Rollups help solve the blockchain trilemma, which states that a blockchain can o
 
 1- A user [submits a transaction](https://docs.zksync.io/zk-stack/concepts/transaction-lifecycle) to a rollup 2. An **operator** (a node or entity responsible for processing transactions) picks it up, bundles it with other transactions, compresses them, and submits the batch back to the L1 blockchain.
 
-There are two types of rollups, ~={green}Optimistic=~ and ~={green}Zero-Knowledge=~ rollups. The main difference between the two lies in how each rollup verifies the validity of the transactions.
+There are two types of rollups, Optimistic and Zero-Knowledge rollups. The main difference between the two lies in how each rollup verifies the validity of the transactions.
 
 ### **_Optimistic Rollups:_**
 
@@ -55,11 +55,11 @@ To mitigate the issues associated with centralized sequencers, projects like **z
 
 #### **Rollup Stages:**
 
-0. **Stage 0:**
+0- **Stage 0:**
 
-   - Governance: Controlled by operators and a security council, ensuring that critical decisions and actions are overseen by a _trusted group_.
-   - Transparency: Open-source software allows reconstruction of state from Layer 1 (L1) data.
-   - Exit Mechanism: Users can exit the rollup within seven days, but it often requires action from an operator.
+- Governance: Controlled by operators and a security council, ensuring that critical decisions and actions are overseen by a _trusted group_.
+- Transparency: Open-source software allows reconstruction of state from Layer 1 (L1) data.
+- Exit Mechanism: Users can exit the rollup within seven days, but it often requires action from an operator.
 
 1- **Stage 1:**
 
@@ -67,11 +67,12 @@ To mitigate the issues associated with centralized sequencers, projects like **z
 - Proof System: Fully functional, enabling decentralized submission of validity proofs.
 - Exit Mechanism: Improved to allow independent user exits without operator coordination.
 
-2. **Stage 2:**
-   - Governance: Fully decentralized and managed by smart contracts.
-   - Proof System: Permissionless, enabling decentralized verification of transactions.
-   - Exit Mechanism: Fully decentralized, with no need for operator involvement.
-   - Security Council: Limited to addressing errors on-chain but not involved in day-to-day operations.
+2- **Stage 2:**
+
+- Governance: Fully decentralized and managed by smart contracts.
+- Proof System: Permissionless, enabling decentralized verification of transactions.
+- Exit Mechanism: Fully decentralized, with no need for operator involvement.
+- Security Council: Limited to addressing errors on-chain but not involved in day-to-day operations.
 
 ![The actual stage of each rollup](https://updraft.cyfrin.io/blockchain-basics/17-rollup-stages/l2beat-summary.png)
 
@@ -88,19 +89,23 @@ To mitigate the issues associated with centralized sequencers, projects like **z
 - Ensures the ability to reconstruct the L2 state from L1 data.
 - Allows anyone to verify and rebuild the L2 state when necessary.
 
-2. **State Validation:**
-   - Ensures legitimacy of bundled transactions.
-   - For ZKSync, state validation is done using **PLONK** (Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge), a zero-knowledge proof algorithm.
-3. **Sequencer Failure:**
-   - Describes processing transactions even if the sequencer (transaction orderer) is down.
-   - In ZKSync, transactions can still be submitted to L1, though they may not be enforced immediately.
+2- **State Validation:**
+
+- Ensures legitimacy of bundled transactions.
+- For ZKSync, state validation is done using **PLONK** (Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge), a zero-knowledge proof algorithm.
+
+3- **Sequencer Failure:**
+
+- Describes processing transactions even if the sequencer (transaction orderer) is down.
+- In ZKSync, transactions can still be submitted to L1, though they may not be enforced immediately.
 
 > **Note:** The sequencer is the operator responsible for ordering and batching user transactions before committing them to Layer 1.
 
-4. **Proposer Failure:**
+4- **Proposer Failure:**
 
-   - Describes the ability to process transactions even if the proposer (who submits the batch of transactions) is down.
-   - ZKSync will halt all withdrawals and transaction executions if the proposer fails.
+- Describes the ability to process transactions even if the proposer (who submits the batch of transactions) is down.
+- ZKSync will halt all withdrawals and transaction executions if the proposer fails.
 
-5. **Exit Window:**
-   - Currently, ZKSync does not have an exit window during unwanted upgrades.
+5- **Exit Window:**
+
+- Currently, ZKSync does not have an exit window during unwanted upgrades.

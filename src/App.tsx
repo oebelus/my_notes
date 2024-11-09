@@ -59,7 +59,7 @@ function App() {
               li: ({...props}) => <li className="my-0.5" {...props} />,
               p: ({...props}) => <p className="my-2" {...props} />,
               a: ({...props}) => <a className="text-blue-500 hover:underline" {...props} />,
-              blockquote: ({...props}) => <blockquote className="border-l-4 bg-dark-bar dark:bg-secondary-color border-gray-300 pl-4 my-2" {...props} />,
+              blockquote: ({...props}) => <blockquote className="border-l-4 bg-dark-bar dark:bg-secondary-color p-2 border-gray-300 pl-4 my-2" {...props} />,
               pre: ({...props}) => (
                 <pre className="dark:bg-secondary-color bg-dark-bar p-4 overflow-x-scroll rounded-lg my-4" {...props} />
               ),

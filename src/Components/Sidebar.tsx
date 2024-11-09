@@ -69,7 +69,7 @@ export default function Sidebar({toggle, setNote}: {toggle: boolean, setNote: (e
                         setSelected(subpage)
                         setNote(subpage)
                       }} 
-                      className={`mb-2 px-6 hover:dark:bg-tertiary-color hover:bg-light-bar transition-all duration-300 cursor-pointer rounded-md ${selected == subpage ? "dark:bg-tertiary-color" : ""}`}>{subpage}</p>
+                      className={`mb-2 px-6 hover:dark:bg-tertiary-color hover:bg-light-bar transition-all duration-300 cursor-pointer rounded-md ${selected == subpage ? "dark:bg-tertiary-color bg-light-bar" : ""}`}>{subpage}</p>
                   ))
                 }
               </div>
