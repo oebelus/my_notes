@@ -7,6 +7,10 @@
   --secondary-color: #242526;
   --tertiary-color: #3e3e3e;
   --dark-text: #c5c1c1;
-  --sepia: #f0e9d7;
+  --sepia: #ffffff;
+  --dark-sepia: #f6f6f6;
+  --light-hover: #9b9188;
   --bar: #3d444d;
+  --light-bar: #d8c1a2;
+  --brown: #a17758;
 }

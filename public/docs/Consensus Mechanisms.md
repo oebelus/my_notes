@@ -135,7 +135,7 @@ Dogecoin uses the same Scrypt algorithm with a focus on faster processing times.
 3. _Zcash (Equihash)_
    > **Mathematical Problem**: Zcash uses the Equihash algorithm, which is based on the Generalized Birthday Problem, requiring miners to find a solution that satisfies certain properties.
 
-Equihash is significantly more complex to implement than SHA-256 or Scrypt. The specifics would typically be handled in existing mining software, like `zcashd`.
+Equihash is significantly more complex to implement than SHA-256 or Scrypt. The specifics would typically be handled in existing mining software, like zcashd.
 
 \> **_how can a miner create new coins?_**
 There is a space to add a special transaction, called "**coinbase**", in the blocks. For every mined block, the reward coins are sent to the public key written in the coinbase.
@@ -156,7 +156,7 @@ A miner adds their own public key and as a result receives the reward coins.
 - PoS is more energy-efficient than PoW.
 - Promotes decentralization by allowing more participants to validate transactions without needing expensive hardware
 
-> In a Proof of Stake system, `miners` are known as `validators`. They aren't actually mining blocks, they're validating other nodes.
+> In a Proof of Stake system, miners are known as validators. They aren't actually mining blocks, they're validating other nodes.
 
 **_Examples:_**
 

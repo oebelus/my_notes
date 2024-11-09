@@ -23,7 +23,7 @@ export default function Theme() {
     return (
         <button 
             onClick={handleThemeSwitch} 
-            className={`text-2xl md:absolute mt-2 bottom-5 right-5`}
+            className={`text-2xl absolute mt-2 bottom-5 right-5`}
         >
             {theme === "dark" ? (
                 <FontAwesomeIcon className="rounded-full p-1 dark:text-gray-300 transition-all hover:text-yellow-300" icon={faSun} />

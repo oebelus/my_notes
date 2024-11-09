@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { pages } from "../Utils/Constants";
+import { pages, socials } from "../Utils/Constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { getTheme } from "../Utils/Theme";
 
 export default function Sidebar({toggle, setNote}: {toggle: boolean, setNote: (e: string) => void}) {
   const [toggleTable, setToggleTable] = useState<{[key: number]: boolean}>();
@@ -14,7 +15,7 @@ export default function Sidebar({toggle, setNote}: {toggle: boolean, setNote: (e
     for (let i = 0; i < length; i++) {
       setToggleTable({...toggleTable, [i]: false});
     }
-  }, [])
+  }, [toggleTable])
 
   const toggleTopic = (index: number) => {
     if (indexToggle.includes(index)) {
@@ -25,28 +26,30 @@ export default function Sidebar({toggle, setNote}: {toggle: boolean, setNote: (e
   }
 
   return (
-    <div className="relative flex divide-x divide-bar">
-      <div className="inset-x-0 bottom-0 p-2 dark:bg-secondary-color bg-sepia min-h-screen w-16 z-50 flex flex-col">
-        {/* {
-          socials.map((social) => (
-            <a href={social.link}>
-              <img 
-                width={50} 
-                height={50} 
-                src={getTheme() === "dark" ? social.white_icon : social.black_icon} 
-                alt={social.name}
-              />
-            </a>
-          ))
-        } */}
+    <div className="relative flex divide-x dark:divide-bar divide-light-bar">
+      <div className="inset-x-0 bottom-0 p-2 dark:bg-secondary-color bg-dark-sepia min-h-screen w-16 z-50 flex flex-col">
+        <div className="absolute bottom-5">
+        {
+            socials.map((social) => (
+              <a href={social.link}>
+                <img 
+                  width={50} 
+                  height={50} 
+                  src={getTheme() === "light" ? social.black_icon : social.white_icon} 
+                  alt={social.name}
+                />
+              </a>
+            ))
+          }
+        </div>
       </div>
-      <div className={`p-4 dark:bg-secondary-color bg-sepia dark:text-dark-text min-h-screen w-[250px] z-50 ${toggle ? "" : "hidden"}`}>
+      <div className={`p-4 dark:bg-secondary-color bg-dark-sepia dark:text-dark-text min-h-screen w-[250px] z-50 ${toggle ? "" : "hidden"}`}>
         {
           pages.map((page, index) => (
             <div key={index} className="text-lg">
               <div 
                 onClick={() => toggleTopic(index)}
-                className="flex mb-2 gap-2 py-1 hover:dark:bg-tertiary-color px-2 cursor-pointer rounded-md">
+                className="flex mb-2 gap-2 py-1 hover:dark:bg-tertiary-color hover:bg-light-bar transition-all duration-300 px-2 cursor-pointer rounded-md">
                 {
                   indexToggle.includes(index) 
                   ?
@@ -66,7 +69,7 @@ export default function Sidebar({toggle, setNote}: {toggle: boolean, setNote: (e
                         setSelected(subpage)
                         setNote(subpage)
                       }} 
-                      className={`mb-2 px-6 hover:dark:bg-tertiary-color cursor-pointer rounded-md ${selected == subpage ? "dark:bg-tertiary-color" : ""}`}>{subpage}</p>
+                      className={`mb-2 px-6 hover:dark:bg-tertiary-color hover:bg-light-bar transition-all duration-300 cursor-pointer rounded-md ${selected == subpage ? "dark:bg-tertiary-color" : ""}`}>{subpage}</p>
                   ))
                 }
               </div>

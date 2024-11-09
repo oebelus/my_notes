@@ -17,6 +17,7 @@ export const pages = [
   {
     name: "Blockchain",
     subpages: [
+      "Intro",
       "Blockchain Fundamentals",
       "Consensus Mechanisms",
       "Rollups",

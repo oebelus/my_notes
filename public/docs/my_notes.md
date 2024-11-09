@@ -1,5 +1,3 @@
-# My Notes
-
 Welcome to my personal notes site, inspired by the simplicity and functionality of Obsidian. I plan to share more notes since I have countless ones LOL, so keep visiting to track updates!
 
 #### Overview
@@ -18,3 +16,13 @@ This site is designed to feel like an Obsidian vault. It's still under developme
 
 - **Search**: Use the search bar to find specific topics, keywords, or tags across all notes.
 
+#### Connect with me
+
+Feel free to reach out or follow me on these platforms:
+
+- [LinkedIn](https://www.linkedin.com/in/imane-el-fadil-el-idrissi-b528b31a6/)
+- [X](https://x.com/oebelus)
+- [GitHub](https://github.com/oebelus)
+- [Portfolio](https://oebelus.vercel.app/)
+- [Email](mailto:imaneelfadilelidrissi@gmail.com)
+- [Tumblr](https://www.tumblr.com/oebelus)
