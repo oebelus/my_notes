@@ -1,21 +1,33 @@
-\- Smart contracts are computer programs in a block. Users can trigger the existing code pieces (“smart contracts”) on a blockchain to execute them with the inputs they want.
+#### Overview
 
-\- Smart contracts are self-executing programs deployed on the Ethereum blockchain that run based on predefined rules. They allow DApps to automate processes and enforce rules without the need for intermediaries. When a user interacts with a smart contract, the blockchain automatically executes the contract’s code.
+Smart contracts are self-executing programs on the blockchain (notably on Ethereum) that operate based on predefined rules.
 
-\- Every smart contract is associated with an account. Users also have accounts. When a user wants to trigger (“call”) a smart contract, that user creates a transaction to the smart contract account. - Triggering a smart contract is the same as creating a new transaction to the account of that smart contract.
+When users interact with a smart contract, it automatically runs according to its code, allowing for automation in decentralized applications (DApps) without intermediaries.
 
-👉 Miners use their computational resources—mostly time and memory—to execute smart contracts. Transaction fees help with two things:
+#### Accounts and Transactions
 
-1- **Incentivizing miners**. It helps to ensure that a blockchain remains decentralized by incentivizing miners to get paid and participate in the network.
+Each smart contract and user has an associated account. When a user wants to trigger (“call”) a smart contract, they create a transaction directed to the contract’s account.
 
-- 🪙 The Bitcoin network incentivizes miners by letting them create new bitcoins and transfer them to their own accounts.
+- This interaction initiates the smart contract's execution.
 
-2. **Preventing spam and abuse.** Requiring a fee to run the code deters spam accounts from sending too many transactions to the network.
+#### Miners and Transaction Fees
 
-> **Fun fact**: The transaction fee is called different things for different blockchains. Ethereum and Cosmos use the label of “gas fee” while Solana calls it “rent.”
+Miners use their computational resources—mostly time and memory—to execute smart contracts. Transaction fees serve two key purposes:
+
+1- **Incentivizing miners**: Fees help maintain a decentralized network by rewarding miners, who ensure security and consensus.
+
+- The Bitcoin 🪙 network incentivizes miners by letting them create new bitcoins (minting) and transfer them to their own accounts.
+2- **Preventing spam and abuse**: Requiring fees to execute code helps deter spam transactions, reducing abuse of the network.
+
+> **Fun Fact**: Different blockchains have unique terms for transaction fees. For example, Ethereum and Cosmos use “gas fees,” while Solana calls it “rent.”
+
+#### Smart Contract Execution Process
 
 So, when smart contracts are executed:
 
-1- **Generating new transactions to be added to new blocks.** 2. **Updating the state of the blockchain**
+1. **Generating new transactions**: Contract executions create new transactions that get added to the blockchain.
+2. **Updating the state of the blockchain**: updating balances, transferring tokens, or executing other predefined actions.
 
-Smart contracts can include logic like transferring tokens, updating balances, or providing decentralized services.
+#### Composability in Blockchain Development
+
+A core feature of blockchain is **composability**—the permissionless and seamless interaction between contracts. This is vital in decentralized finance (DeFi), where complex financial products interact smoothly using shared contract interfaces.
