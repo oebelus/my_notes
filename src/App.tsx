@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/my_notes">
       <div className="h-screen flex flex-col">
         <Navbar setToggle={setToggle} toggle={toggle} />
         <div className="flex flex-1 overflow-hidden">
@@ -27,8 +27,8 @@ function App() {
           <div className="p-12 flex-1 overflow-auto dark:bg-primary-color bg-sepia z-[99] dark:text-dark-text">
             
             <Routes>
-              <Route path='/my_notes' element={<MarkdownPage/>} />
-              <Route path='/my_notes/:noteId' element={<MarkdownPage/>} />
+              <Route path='/' element={<MarkdownPage/>} />
+              <Route path='/:noteId' element={<MarkdownPage/>} />
             </Routes>
             
             <Theme />
