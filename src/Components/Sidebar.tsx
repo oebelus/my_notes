@@ -98,7 +98,7 @@ export default function Sidebar({toggle}: {toggle: boolean}) {
                         handlePageSelection(subpage);
                         setSelected(subpage);
                        }} 
-                      className={`mb-2 px-6 hover:dark:bg-tertiary-color hover:bg-light-bar transition-all duration-300 cursor-pointer rounded-md ${selected.split("/").length >= 2 && selected.split("/")[2].split('%20').join(" ") == subpage ? "dark:bg-tertiary-color bg-light-bar" : ""}`}>{subpage}</p>
+                      className={`mb-2 px-6 hover:dark:bg-tertiary-color hover:bg-light-bar transition-all duration-300 cursor-pointer rounded-md ${selected.split("/").length >= 2 && selected.split("/")[2] && selected.split("/")[2].split('%20').join(" ") == subpage ? "dark:bg-tertiary-color bg-light-bar" : ""}`}>{subpage}</p>
                   ))
                 }
               </div>
