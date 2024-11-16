@@ -183,9 +183,8 @@ function privateFunction() private {
 ```
 
 >📞While calling `view` or `pure` functions doesn’t typically require gas, they do require it when called by another function that modifies the state or storage through a transaction.
->  This cost is called **execution cost** and it will add up to the transaction cost.
+> This cost is called **execution cost** and it will add up to the transaction cost.
 
-More about the difference between deploying a contract and transferring a transaction [[Deploying a Contract vs Transferring a Transaction|here]].
 
 ## Function Modifiers
 

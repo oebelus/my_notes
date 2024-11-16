@@ -26,4 +26,8 @@ export const pages = [
       "Basic Solidity Concepts",
     ],
   },
+  {
+    name: "Cyfrin Updraft Courses",
+    subpages: ["Solidity Smart Contract Development"],
+  },
 ];
