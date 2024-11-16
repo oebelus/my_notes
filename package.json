@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://localhost:5174/my_notes",
+  "homepage": "https://oebelus.github.io/my_notes/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
