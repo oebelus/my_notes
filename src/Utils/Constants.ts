@@ -23,6 +23,7 @@ export const pages = [
       "Rollups",
       "Smart Contracts",
       "Architecture of a dApp",
+      "Basic Solidity Concepts",
     ],
   },
 ];

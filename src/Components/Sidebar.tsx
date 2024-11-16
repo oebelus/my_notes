@@ -3,19 +3,42 @@ import { pages, socials } from "../Utils/Constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { getTheme } from "../Utils/Theme";
+import { useLocation, useNavigate } from "react-router-dom";
 
-export default function Sidebar({toggle, setNote}: {toggle: boolean, setNote: (e: string) => void}) {
-  const [toggleTable, setToggleTable] = useState<{[key: number]: boolean}>();
+export default function Sidebar({toggle}: {toggle: boolean}) {
   const [indexToggle, setIndexToggle] = useState<number[]>([]);
   const [selected, setSelected] = useState("");
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   useEffect(() => {
-    const length = pages.length;
-    
-    for (let i = 0; i < length; i++) {
-      setToggleTable({...toggleTable, [i]: false});
+    setSelected(location.pathname);
+  }, [location]);
+
+  const [, setToggleTable] = useState<{[key: number]: boolean}>(() => {
+    const initial: {[key: number]: boolean} = {};
+    for (let i = 0; i < pages.length; i++) {
+      initial[i] = false;
     }
-  }, [toggleTable])
+    return initial;
+  });
+
+  useEffect(() => {
+    const initial: { [key: number]: boolean } = {};
+    pages.forEach((_, index) => {
+      initial[index] = false;
+    });
+    setToggleTable(initial);
+  }, []);
+
+  useEffect(() => {
+    const initial: { [key: number]: boolean } = {};
+    pages.forEach((_, index) => {
+      initial[index] = false;
+    });
+    setToggleTable(initial);
+  }, []);
 
   const toggleTopic = (index: number) => {
     if (indexToggle.includes(index)) {
@@ -23,6 +46,12 @@ export default function Sidebar({toggle, setNote}: {toggle: boolean, setNote: (e
     } else {
       setIndexToggle([...indexToggle, index]);
     }
+  }
+
+  const handlePageSelection = (subpage: string) => {
+    setSelected(subpage);
+    const path = subpage === 'my_notes' ? '/' : `/my_notes/${subpage}`;
+    navigate(path);
   }
 
   return (
@@ -66,10 +95,10 @@ export default function Sidebar({toggle, setNote}: {toggle: boolean, setNote: (e
                   page.subpages.map((subpage) => (
                     <p
                       onClick={() => {
-                        setSelected(subpage)
-                        setNote(subpage)
-                      }} 
-                      className={`mb-2 px-6 hover:dark:bg-tertiary-color hover:bg-light-bar transition-all duration-300 cursor-pointer rounded-md ${selected == subpage ? "dark:bg-tertiary-color bg-light-bar" : ""}`}>{subpage}</p>
+                        handlePageSelection(subpage);
+                        setSelected(subpage);
+                       }} 
+                      className={`mb-2 px-6 hover:dark:bg-tertiary-color hover:bg-light-bar transition-all duration-300 cursor-pointer rounded-md ${selected.split("/").length >= 2 && selected.split("/")[2].split('%20').join(" ") == subpage ? "dark:bg-tertiary-color bg-light-bar" : ""}`}>{subpage}</p>
                   ))
                 }
               </div>

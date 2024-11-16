@@ -1,13 +1,21 @@
 import { faBurger, faFolder, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 interface NavbarProps {
     setToggle: React.Dispatch<React.SetStateAction<boolean>>;
     toggle: boolean;
-    note: string
 }
 
-export default function Navbar({ setToggle, toggle, note }: NavbarProps) {
+export default function Navbar({ setToggle, toggle }: NavbarProps) {
+    
+    const { noteId = 'my_notes' } = useParams();
+
+    useEffect(() => {
+        console.log(noteId);
+    }, [noteId]);
+
     return (
         <nav className="dark:bg-tertiary-color bg-light-bar flex justify-between p-3 h-16 shadow-lg dark:text-dark-text text-brown">
             <div className="flex gap-14">
@@ -25,7 +33,7 @@ export default function Navbar({ setToggle, toggle, note }: NavbarProps) {
                         <FontAwesomeIcon icon={faSearch} />
                     </button>
                     </div>
-                <div className={`mt-2 text-2xl text-pretty font-mono dark:bg-primary-color bg-sepia rounded-xl p-2 pr-8 h-36 ${note == "" ? "w-[200px]" : "w-fit"} pl-4 text-left transition-all duration-300 ease-in-out ${toggle ? "translate-x-20" : ""}`}>{note != "" ? note : "my_notes"}</div>
+                <div className={`mt-2 text-2xl text-pretty font-mono dark:bg-primary-color bg-sepia rounded-xl p-2 pr-8 h-36 ${noteId == "" ? "w-[200px]" : "w-fit"} pl-4 text-left transition-all duration-300 ease-in-out ${toggle ? "translate-x-20" : ""}`}>{noteId != "" ? noteId : "my_notes"}</div>
             </div>
         </nav>
     )
