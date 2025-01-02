@@ -12,9 +12,9 @@ Let's take Ethereum as an example. It has four important perks:
 
 The architecture of a Decentralized Application (DApp) like Ethereum consists of multiple components that work together to provide a decentralized solution.
 
-1- User 
+1- User
 
-2. Web Browser
+2- Web Browser
 
 - A signer, and it's generally a browser extension, like MetaMask.
 
@@ -39,15 +39,6 @@ The architecture of a Decentralized Application (DApp) like Ethereum consists of
 - Processing gas (transaction fees)
 
 8- Layer 2 solutions for scalability (Polygon, ZK rollups), built on top of the Ethereum blockchain to enhance scalability. They connect to both the Ethereum blockchain and the frontend, reducing congestion and transaction costs.
-
-##### Overview
-
-- **User** interacts with the DApp through their web browser.
-- **Frontend** displays the user interface and handles user input.
-- **Provider** connects the frontend to the Ethereum blockchain, enabling transactions and data retrieval.
-- **Smart Contracts** execute the logic defined by the DApp on the blockchain.
-- **EVM** processes the contract execution and ensures the integrity of the blockchain's state changes.
-- **Layer 2 Solutions**: Increase scalability and decrease transaction costs, improving the overall user experience.
 
 All in all:
 

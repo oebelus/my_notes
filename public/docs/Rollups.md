@@ -9,13 +9,13 @@ Rollups help solve the blockchain trilemma, which states that a blockchain can o
 - _scalability_
   In the case of Ethereum, **scalability** is sacrificed as it can only process approximately 15 transactions per second. Rollups, on the other hand, aim to enhance scalability without compromising security or decentralization.
 
-### **_How Rollups Work?_**
+### How Rollups Work?
 
 1- A user [submits a transaction](https://docs.zksync.io/zk-stack/concepts/transaction-lifecycle) to a rollup 2. An **operator** (a node or entity responsible for processing transactions) picks it up, bundles it with other transactions, compresses them, and submits the batch back to the L1 blockchain.
 
 There are two types of rollups, Optimistic and Zero-Knowledge rollups. The main difference between the two lies in how each rollup verifies the validity of the transactions.
 
-### **_Optimistic Rollups:_**
+### Optimistic Rollups
 
 - _Overview:_
   \- They assume that off-chain transactions are _valid by default_ and process them off-chain to improve scalability.
@@ -34,7 +34,7 @@ There are two types of rollups, Optimistic and Zero-Knowledge rollups. The main 
   \- If the fraud proof is successful, the rollup re-executes the entire batch of transactions correctly.
   \- The operator responsible for the incorrect transaction is **penalized**, often through **slashing** (losing staked tokens).
 
-### **_ZK Rollups:_**
+### ZK Rollups
 
 - ZK rollups use validity proofs, known as _ZK proofs_, to verify transaction batches.
 - In this process:
@@ -42,18 +42,18 @@ There are two types of rollups, Optimistic and Zero-Knowledge rollups. The main 
   - A **verifier** (an L1 contract) then checks this proof to ensure that the output matches the expected result.
   - The solution that the prover uses to demonstrate that their input satisfies the mathematical equation in the ZK proof is commonly referred as the **witness**.
 
-### **_Centralized Sequencers_**
+### Centralized Sequencers
 
 - In blockchain and cryptocurrency networks, the role of a **sequencer** is crucial for ordering and bundling transactions.
 - Sequencers are operators that are responsible for organizing how transactions are processed. In many roll-up solutions, sequencers are centralized, controlled by a single entity.
 
 To mitigate the issues associated with centralized sequencers, projects like **zkSync** are working towards _decentralizing_ their sequencer operations, distributing control among multiple entities or nodes.
 
-### **_L2 Rollup Stages_**
+### L2 Rollup Stages
 
 **Layer 2 (L2) Chain Maturity**: L2 chains are assessed based on specific properties and categorized into stages. The [L2B](https://l2beat.com/scaling/summary) team provides an opinionated assessment to encourage greater decentralization.
 
-#### **Rollup Stages:**
+#### Rollup Stages
 
 0- **Stage 0:**
 
@@ -76,13 +76,13 @@ To mitigate the issues associated with centralized sequencers, projects like **z
 
 ![The actual stage of each rollup](https://updraft.cyfrin.io/blockchain-basics/17-rollup-stages/l2beat-summary.png)
 
-### **ZKSync Risk Analysis**
+### ZKSync Risk Analysis
 
-#### **Current Stage:**
+#### Current Stage
 
 - ZKSync Era is currently operating as a **Stage 0** rollup.
 
-#### **Risk Factors in ZKSync:**
+#### Risk Factors in ZKSync
 
 1- **Data Availability:**
 

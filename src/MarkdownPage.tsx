@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 export default function MarkdownPage() {
     const { noteId = 'my_notes' } = useParams();
-    const [markdown, setMarkdown] = useState('');
+    const [markdown, setMarkdown] = useState("");
 
     useEffect(() => {
         if (noteId) {

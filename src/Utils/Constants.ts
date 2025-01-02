@@ -21,7 +21,6 @@ export const pages = [
       "Blockchain Fundamentals",
       "Consensus Mechanisms",
       "Rollups",
-      "Smart Contracts",
       "Architecture of a dApp",
       "Basic Solidity Concepts",
     ],
@@ -29,5 +28,9 @@ export const pages = [
   {
     name: "Cyfrin Updraft Courses",
     subpages: ["Solidity Smart Contract Development"],
+  },
+  {
+    name: "Programming Languages",
+    subpages: ["About The Course", "SML", "Shadowing"],
   },
 ];
