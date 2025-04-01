@@ -1,3 +1,10 @@
+
+|> Get Started by Clicking on the Burger Button on the Top Left.
+<div align="center">
+<img src="https://camo.githubusercontent.com/e91e32208f136365247f7e871c6220cfc9210475e4a5ff48028eb7280f0009e5/68747470733a2f2f63646e2e6d6f732e636d732e66757475726563646e2e6e65742f627078673950685562645537354a74763745535157512e6a7067">
+
+</div>
+
 Welcome to my personal notes site, inspired by the simplicity and functionality of Obsidian. I plan to share more notes since I have countless ones LOL, so keep visiting to track updates!
 
 This site is designed to feel like an Obsidian vault. It's still under development, and I plan to implement other features including Tags and Search.
@@ -6,9 +13,7 @@ This site is designed to feel like an Obsidian vault. It's still under developme
 
 Feel free to reach out :3
 
-- [LinkedIn](https://www.linkedin.com/in/imane-el-fadil-el-idrissi-b528b31a6/)
 - [X](https://x.com/oebelus)
 - [GitHub](https://github.com/oebelus)
 - [Portfolio](https://oebelus.vercel.app/)
-- [Email](mailto:imaneelfadilelidrissi@gmail.com)
-- [Tumblr](https://www.tumblr.com/oebelus)
+- [Bluesky](https://bsky.app/profile/oebelus.bsky.social)

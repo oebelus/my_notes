@@ -15,6 +15,24 @@ export const portfolio = {
 
 export const pages = [
   {
+    name: "Programming Languages Concepts",
+    subpages: ["Shadowing", "Lifted and Boxed", "Tagged Union", "Scopes"],
+  },
+  {
+    name: "OS Learning",
+    subpages: ["The Process"],
+  },
+  {
+    name: "Rust",
+    subpages: [
+      "Smart Pointers",
+      "Closures",
+      "Rust Macros",
+      "Threads",
+      "Unsafe Rust",
+    ],
+  },
+  {
     name: "Blockchain",
     subpages: [
       "Intro",
@@ -26,11 +44,22 @@ export const pages = [
     ],
   },
   {
-    name: "Cyfrin Updraft Courses",
-    subpages: ["Solidity Smart Contract Development"],
+    name: "Databases",
+    subpages: [
+      "SQL vs NoSQL",
+      "SQL",
+      "Types of Keys in a Relational Database Table",
+      "Data Normalization",
+      "PostgreSQL",
+      "MongoDB",
+    ],
   },
   {
-    name: "Programming Languages",
-    subpages: ["About The Course", "SML", "Shadowing"],
+    name: "Q&A",
+    subpages: ["Node.js"],
+  },
+  {
+    name: "Random",
+    subpages: ["Resources"],
   },
 ];
