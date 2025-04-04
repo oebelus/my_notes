@@ -282,5 +282,3 @@ emitter.emit('event-name', 'Some Payload');
 
 - **`path`**: Aids in file path string manipulation.
 - **`url`**: Parses and formats URL strings, especially beneficial in web applications and server operations.
-
-### How do you create a simple server in Node.js using the HTTP module?

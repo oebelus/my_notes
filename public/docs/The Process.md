@@ -47,39 +47,51 @@ The process memory is divided into four sections:
 
 >The stack and the heap start at opposite ends of the process's free space and grow towards each other. If they should ever meet, then either a stack overflow error will occur, or else a call to new or malloc will fail due to insufficient memory available.
 
-<div style="text-align: center;">
+<div align="center">
  <img src="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter3/3_01_Process_Memory.jpg" alt="A process in memory">
 </div>
+
 #### The Process API
+
 The process API consists of calls programs can make related to processes. The APIs that must be included in any interface of an operating system are:
+
 - Create: A method to create new processes;
- - Typing a command into the shell
- - Double-clicking on an application icon
+  - Typing a command into the shell
+  - Double-clicking on an application icon
 - Destroy: A method to destroy processes forcefully.
- - An interface to kill a process in case they don't terminate normally after they are complete.
+  - An interface to kill a process in case they don't terminate normally after they are complete.
 - Wait: A method to wait for a process to stop running.
 - Miscellaneous Control: Other controls other than creating or destroying.
- - Suspending a process for a while then resuming it.
+  - Suspending a process for a while then resuming it.
 - Status: A method to get status information about a process.
- - How long it has run for;
- - What state it is in,
- - How much resources it consumes ...etc.
+  - How long it has run for;
+  - What state it is in,
+  - How much resources it consumes ...etc.
+
 #### Process Creation
+
 The question here is, how does an OS run a program?
-1. Programs initially reside on disk (or flash-based SSDs) in some kind of executable format;
-2. The OS loads the program's code and any static data (initialized variables) and reads the bytes into memory (the address space of the process).
+
+1- Programs initially reside on disk (or flash-based SSDs) in some kind of executable format;
+
+2- The OS loads the program's code and any static data (initialized variables) and reads the bytes into memory (the address space of the process).
 
 >In early OS, the loading process is done eagerly (all at once before running the program); modern OSes perform the process lazily, by loading pieces of code or data only as they are needed during the program execution. To do so, the OS has to do something that we'll see later (paging, swapping ...etc.) before running anything.
 
-3. Memory allocation for the program's run-time stack, the OS  will also likely initialize the stack with arguments, specifically, it will fill in the parameters to the `main()` function, i.e., `argc` and `argv`.
-4. Memory allocation for the program's heap. It will be small at first; as the program runs, and requests more memory via `malloc()` library API, the OS might get involved and allocate more memory to the process.
-5. Initialization tasks, related to I/O.
-6. The OS then jumps to the `main()` routine through a specialized mechanism (we'll see later). and transfers control of the CPU to the newly-created process.
-7. The program begins execution :3
+3- Memory allocation for the program's run-time stack, the OS  will also likely initialize the stack with arguments, specifically, it will fill in the parameters to the `main()` function, i.e., `argc` and `argv`.
 
-<div style="text-align: center;">
- <img src="https://o.quizlet.com/KmoQLTBfwDUhLmO3Lknz8g.png" alt="loading from program to process">
+4- Memory allocation for the program's heap. It will be small at first; as the program runs, and requests more memory via `malloc()` library API, the OS might get involved and allocate more memory to the process.
+
+5- Initialization tasks, related to I/O.
+
+6- The OS then jumps to the `main()` routine through a specialized mechanism (we'll see later). and transfers control of the CPU to the newly-created process.
+
+7- The program begins execution :3
+
+<div>
+ <img style="max-width: 100%; height: auto;" src="https://o.quizlet.com/KmoQLTBfwDUhLmO3Lknz8g.png" alt="loading from program to process">
 </div>
+
 #### Process States
 When you run a program, which becomes a process, it goes through different phases, that depend on OS, before completion. The most common process lifecycle include two, five, or seven states.
 
@@ -95,13 +107,15 @@ The process can be one of five states:
 >
 >When finished, the parent will make one final call (e.g., wait()) to wait for the completion of the child, and to also indicate to the OS that it can clean up any relevant data structures that referred to the now-extinct process.
 
-<div style="text-align: center;">
- <img src="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter3/3_02_ProcessState.jpg">
+<div>
+ <img style="max-width: 100%; height: auto;" src="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter3/3_02_ProcessState.jpg">
 </div>
 A process can be moved between the ready and running states:
 - Being moved from ready to running means the process has been scheduled;
 - Being moved from running to ready means the process has been descheduled.
+
 #### Process Control Block
+
 The OS is a program that has some key data structures that track relevant pieces of information. So the PCB (Process Control block) is a data structure maintained by the OS  for every process, and it keeps all the information needed to keep track of a process:
 
 | Name                          | Description                                                                            |
@@ -117,10 +131,11 @@ The OS is a program that has some key data structures that track relevant pieces
 | Accounting Information        | The amount of CPU used for process execution, time limits, execution ID etc.           |
 | IO status information         | A list of I/O devices allocated to the process, open file tables, etc.                 |
 
-<div style="text-align: center;">
+<div align="center">
  <img src="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter3/3_03_PCB.jpg" alt="PCB">
 </div>
 The CPU registers and program counter are needed to be saved and restored when swapping processes in and out of the CPU.
+
 ##### Example from the [xv6 kernel](https://github.com/mit-pdos/xv6-public)
 This shows what type of information an OS needs to track about each process in the xv6 kernel. Similar process structures, yet complex, exist in “real” operating systems such as Linux, Mac OS X, or Windows.
 1. The registers  xv6 will save and restore to stop and restart a process:

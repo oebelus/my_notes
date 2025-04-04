@@ -5,7 +5,6 @@ import Theme from './Components/Theme';
 import { HashRouter, Route, Routes, useParams } from 'react-router-dom';
 import MarkdownPage from './MarkdownPage';
 
-
 function App() {
   const [toggle, setToggle] = useState(false);
   const { noteId } = useParams();
@@ -24,7 +23,7 @@ function App() {
         <Navbar setToggle={setToggle} toggle={toggle} />
         <div className="flex flex-1 overflow-hidden">
           <Sidebar toggle={toggle}/>
-          <div className="p-12 flex-1 overflow-auto dark:bg-primary-color bg-sepia z-[99] dark:text-dark-text">
+          <div className="overflow-x-scroll p-4 md:p-12 flex-1 overflow-auto dark:bg-primary-color bg-sepia z-[99] dark:text-dark-text">
             
             <Routes>
               <Route path='/my_notes' element={<MarkdownPage/>} />

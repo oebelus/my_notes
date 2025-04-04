@@ -1,6 +1,6 @@
 They are L2 scaling solutions that enable to increase the number of transactions on Ethereum by bundling multiple transactions into one, reducing gas costs.
 
-![Rollups](https://updraft.cyfrin.io/blockchain-basics/15-l1s-l2s-and-rollups/tx-bundle.png)
+<div><img style="max-width: 100%; height: auto;" src="https://updraft.cyfrin.io/blockchain-basics/15-l1s-l2s-and-rollups/tx-bundle.png" alt="rollups" /> </div>
 
 Rollups help solve the blockchain trilemma, which states that a blockchain can only achieve two out of three properties:
 
@@ -74,7 +74,7 @@ To mitigate the issues associated with centralized sequencers, projects like **z
 - Exit Mechanism: Fully decentralized, with no need for operator involvement.
 - Security Council: Limited to addressing errors on-chain but not involved in day-to-day operations.
 
-![The actual stage of each rollup](https://updraft.cyfrin.io/blockchain-basics/17-rollup-stages/l2beat-summary.png)
+<div><img style="max-width: 100%; height: auto;" src="https://updraft.cyfrin.io/blockchain-basics/17-rollup-stages/l2beat-summary.png" alt="rollups" /> </div>
 
 ### ZKSync Risk Analysis
 

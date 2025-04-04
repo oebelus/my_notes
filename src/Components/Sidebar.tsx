@@ -55,8 +55,8 @@ export default function Sidebar({toggle}: {toggle: boolean}) {
   }
 
   return (
-    <div className="relative flex divide-x dark:divide-bar divide-light-bar">
-      <div className="inset-x-0 bottom-0 p-2 dark:bg-secondary-color bg-dark-sepia min-h-screen w-16 z-50 flex flex-col">
+    <div className="flex relative divide-x dark:divide-bar divide-light-bar">
+      <div className="md:flex hidden inset-x-0 bottom-0 p-2 dark:bg-secondary-color bg-dark-sepia min-h-screen w-16 z-50 flex-col">
         <div className="absolute bottom-5">
         {
             socials.map((social) => (
@@ -72,7 +72,7 @@ export default function Sidebar({toggle}: {toggle: boolean}) {
           }
         </div>
       </div>
-      <div className={`p-4 dark:bg-secondary-color bg-dark-sepia dark:text-dark-text min-h-screen w-[250px] z-50 ${toggle ? "" : "hidden"}`}>
+      <div className={`overflow-y-scroll absolute md:relative p-4 dark:bg-secondary-color bg-dark-sepia dark:text-dark-text h-[100dvh] w-[250px] z-[999] ${toggle ? "" : "hidden"}`}>
         {
           pages.map((page, index) => (
             <div key={index} className="text-lg">
